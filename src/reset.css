@@ -1,0 +1,73 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  gap: 1em;
+  grid-template-areas:
+    "mainNews mainNews moreNews"
+    "content1 content2 content3";
+}
+
+.mainNews {
+  grid-area: mainNews;
+}
+
+.mainNews img {
+  grid-area: img;
+}
+
+.moreNews {
+  grid-area: moreNews;
+  background-color: #00001a;
+}
+
+.content-1 {
+  grid-area: content1;
+}
+
+.content-2 {
+  grid-area: content2;
+}
+
+.content-3 {
+  grid-area: content3;
+}
+
+.about button {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4.375px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 0.1fr 0.1fr 0.1fr;
+    grid-template-areas:
+      "mainNews"
+      "moreNews"
+      "content1"
+      "content2"
+      "content3";
+  }
+  .pp {
+    margin-top: 16px;
+  }
+
+  .roadMore {
+    margin-top: 24px;
+  }
+}
+
+.new::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #5e607a;
+  margin: 20px auto;
+}
+
+.new:last-child::after {
+  content: none;
+}
